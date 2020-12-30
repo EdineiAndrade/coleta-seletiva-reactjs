@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from './components/Header';
+import Home from './pages/Home';
+import './App.css'
 
 
 function App() {
   return (
     <React.Fragment>
-      <Header/>
-      <h1>Hello Dev!!</h1>
+      <Home/>
     </React.Fragment>
   );
 }
