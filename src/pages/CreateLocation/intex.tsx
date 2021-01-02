@@ -64,12 +64,12 @@ const CreateLocation: React.FC = () => {
                             <h2>Endereço</h2>
                             <span>Marque o endereço no mapa</span>
                         </legend>
-                        <Map center={[-23.0003709, -43.365895]} zoom={14}>
+                        <Map center={[-13.6283037,-41.3310294]} zoom={14}>
                             <TileLayer
                                 attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             />
-                            <Marker position={[-23.0003709, -43.365895]} />
+                            <Marker position={[-13.6283037,-41.3310294]} />
                         </Map>
                         <div className="field-group">
                             <div className="field">
