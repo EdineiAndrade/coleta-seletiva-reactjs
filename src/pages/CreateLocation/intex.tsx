@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {FiArrowLeft} from 'react-icons/fi';
-import bateria from '../../assets/bateria.svg'
-import eletronico from '../../assets/eletronico.svg'
-import oleo from '../../assets/oleo.svg'
-import organico from '../../assets/organico.svg'
-import papel from '../../assets/papel.svg'
-import vidro from '../../assets/vidro.svg'
+import {Map, TileLayer, Marker } from 'react-leaflet';
+import bateria from '../../assets/bateria.svg';
+import eletronico from '../../assets/eletronico.svg';
+import oleo from '../../assets/oleo.svg';
+import organico from '../../assets/organico.svg';
+import papel from '../../assets/papel.svg';
+import vidro from '../../assets/vidro.svg';
 
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.svg';
 
-import './styles.css'
+import './styles.css';
 
 const CreateLocation: React.FC = () => {
     return(       
@@ -63,6 +64,13 @@ const CreateLocation: React.FC = () => {
                             <h2>Endereço</h2>
                             <span>Marque o endereço no mapa</span>
                         </legend>
+                        <Map center={[-23.0003709, -43.365895]} zoom={14}>
+                            <TileLayer
+                                attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            />
+                            <Marker position={[-23.0003709, -43.365895]} />
+                        </Map>
                         <div className="field-group">
                             <div className="field">
                                 <label htmlFor="city">Cidade</label>
